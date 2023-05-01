@@ -1,6 +1,6 @@
 
 <div align="center">
-	<a href='https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/1/introduction' target="_blank">
+	<a href='https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/1/introduction' target="_blank" rel="noopener noreferrer">
 	<img src="https://user-images.githubusercontent.com/50035229/235389663-fed583ca-7297-4385-88b9-3587baaed90b.png" width="800" >
 	</a>
 	<h1>🎡提示词工程师入门指南</h1>
