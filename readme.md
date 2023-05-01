@@ -1,13 +1,16 @@
-<p align='center'>
-    <img src='https://user-images.githubusercontent.com/50035229/235389663-fed583ca-7297-4385-88b9-3587baaed90b.png' alt='' width='800'/>
-</p>
 
-<p align='center'>
-   👏🏻欢迎PR & Star，让更多人了解<strong> 提示词工程师 </strong> 👏🏻
-<br>
-<br>
-    🎡提示词工程师入门指南
-</p>
+<div align="center">
+	<img src="https://user-images.githubusercontent.com/50035229/235389663-fed583ca-7297-4385-88b9-3587baaed90b.png" width="800" >
+	<h1>🎡提示词工程师入门指南</h1>
+	<p>
+		<b>👏🏻欢迎PR & Star，让更多人了解<strong> 提示词工程师 </strong> 👏🏻</b>
+	</p>
+	<br>
+	<br>
+	<br>
+</div>
+
+
 
 ## 介绍
 
