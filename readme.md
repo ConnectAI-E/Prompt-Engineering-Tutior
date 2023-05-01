@@ -37,11 +37,11 @@ OpenAI的模型中，InstructGPT Models 列出了针对指令优化的模型。�
 - 让模型自己推导出过程，而不仅仅是结果。展示一个带有解题过程的例子给LLM。
 - 避免模型产生幻觉：要告诉模型先查找相关资料，再根据相关资料来回答问题。（但模型产生幻觉很难避免，也是目前模型研究领域努力的方向）
 
-| 实现语言   | 语料                                                                                                                                                 |
+| 资料     | 语料                                                                                                                                                 |
 |:-------|:---------------------------------------------------------------------------------------------------------------------------------------------------|
-| 教学视频   | <a href="https://www.bilibili.com/video/BV1No4y1t7Zn">中文</a>、<a href="https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/2/guidelines">英文</a> |
-| Python | <a href="../">中文</a>、<a href="./python/en/guidelines.ipynb">英文</a>                                                                                 |
-| NodeJS | <a href="../">中文</a>、<a href="../">英文</a>                                                                                                          |
-| Golang | <a href="../">中文</a>、<a href="../">英文</a>                                                                                                          |
+| 教学视频   | <a href="https://www.bilibili.com/video/BV1No4y1t7Zn">中✅</a>、<a href="https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/2/guidelines">英✅</a> |
+| Python | <a href="#">中❌</a>、<a href="./python/en/guidelines.ipynb">英✅</a>                                                                                   |
+| NodeJS | <a href="#">中❌</a>、<a href="#">英❌</a>                                                                                                              |
+| Golang | <a href="#">中❌</a>、<a href="./golang/en/guidelines.go">英✅</a>                                                                                      |
 
 
