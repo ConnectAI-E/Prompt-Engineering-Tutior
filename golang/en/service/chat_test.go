@@ -1,6 +1,7 @@
 package service
 
 import (
+	"os"
 	"testing"
 )
 
@@ -20,7 +21,7 @@ func TestChatGpt_getCompletion(t *testing.T) {
 		{
 			name: "test-chat",
 			fields: fields{
-				OpenAI: "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",
+				OpenAI: os.Getenv("OPENAI_TOKEN"),
 			},
 			args: args{
 				content: "hello",
