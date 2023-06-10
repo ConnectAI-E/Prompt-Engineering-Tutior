@@ -18,7 +18,7 @@
 
 🥐 参考视频课程：[ChatGPT Prompt Engineering for Developers](https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/1/introduction)
 
-🍔 中文字幕搬运：[ChatGPT提示工程师｜AI大神吴恩达教你写提示词](https://www.bilibili.com/video/BV1No4y1t7Zn)
+🍔 中文字幕搬运：[ChatGPT提示工程师｜AI大神吴恩达教你写提示词](https://www.bilibili.com/video/BV1AT41187qt)
 
 🥪 实现语言：Python、Golang、NodeJs
 
