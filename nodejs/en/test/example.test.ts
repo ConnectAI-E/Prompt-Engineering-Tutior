@@ -1,5 +1,11 @@
-import { test, expect } from 'vitest';
+import { test, expect,beforeAll } from 'vitest';
+import { OpenAIApi } from 'openai';
+import { getCompletion } from '../src/utill';
+import * as dotenv from 'dotenv';
 
-test('Example Test', () => {
-    expect(true).toBe(true);
-});
+test('base OpenAIApi', async () => { 
+    const re = await getCompletion('Hello, my name is');
+    expect(re).not.toBe(null);
+})
+
+
