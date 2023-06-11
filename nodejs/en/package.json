@@ -15,7 +15,8 @@
     "dotenv": "^16.0.3",
     "figlet": "^1.5.2",
     "inquirer": "^9.1.4",
-    "openai": "^3.2.1"
+    "openai": "^3.2.1",
+    "vite": "^4.3.9"
   },
   "devDependencies": {
     "@types/clear": "^0.1.2",
