@@ -24,6 +24,16 @@
 
 🍗 语料语言：英文、中文
 
+## 代码
+| 资料     | 语料                                                                                                                                                 |
+|:-------|:---------------------------------------------------------------------------------------------------------------------------------------------------|
+| 教学视频   | <a href="https://www.bilibili.com/video/BV1No4y1t7Zn">中✅</a>、<a href="https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/2/guidelines">英✅</a> |
+| Python | <a href="#">中❌</a>、<a href="./python/en/guidelines.ipynb">英✅</a>                                                                                   |
+| NodeJS | <a href="#">中❌</a>、<a href="./nodejs/en/readme.md">英✅</a>                                                                                                             
+| Golang | <a href="#">中❌</a>、<a href="./golang/en/guidelines.go">英✅</a>                                                                                      |
+
+
+
 ## 正文
 
 ### Guidelines 总体准则
@@ -56,12 +66,5 @@ OpenAI的模型中，InstructGPT Models 列出了针对指令优化的模型。�
 - 分析原因
 - 修订Prompt（澄清思路）
 - 循环上述步骤，直到达到满意的结果为止。
-
-| 资料     | 语料                                                                                                                                                 |
-|:-------|:---------------------------------------------------------------------------------------------------------------------------------------------------|
-| 教学视频   | <a href="https://www.bilibili.com/video/BV1No4y1t7Zn">中✅</a>、<a href="https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/2/guidelines">英✅</a> |
-| Python | <a href="#">中❌</a>、<a href="./python/en/guidelines.ipynb">英✅</a>                                                                                   |
-| NodeJS | <a href="#">中❌</a>、<a href="./nodejs/en/readme.md">英✅</a>                                                                                                             
-| Golang | <a href="#">中❌</a>、<a href="./golang/en/guidelines.go">英✅</a>                                                                                      |
 
 
