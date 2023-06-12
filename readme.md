@@ -117,8 +117,7 @@ def get_completion_from_messages(messages, model="gpt-3.5-turbo", temperature=0)
         messages=messages,
         temperature=temperature, # this is the degree of randomness of the model's output
     )
-# print(str(response.choices[0].message))
-    return response.choices[0].message["content"]
+    return response.choices[0].message["content"] # print(str(response.choices[0].message))
 
 messages =  [  
 {'role':'system', 'content':'You are an assistant that speaks like Shakespeare.'},    
