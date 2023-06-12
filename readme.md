@@ -29,7 +29,7 @@
 |:-------|:---------------------------------------------------------------------------------------------------------------------------------------------------|
 | 教学视频   | <a href="https://www.bilibili.com/video/BV1No4y1t7Zn">中✅</a>、<a href="https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/2/guidelines">英✅</a> |
 | Python | <a href="#">中❌</a>、<a href="./python/en/guidelines.ipynb">英✅</a>                                                                                   |
-| NodeJS | <a href="#">中❌</a>、<a href="./nodejs/en/readme.md">英✅</a>                                                                                                             
+| NodeJS | <a href="./nodejs/cn/readme.md">中✅</a>、<a href="./nodejs/en/readme.md">英✅</a>                                                                                                             
 | Golang | <a href="#">中❌</a>、<a href="./golang/en/guidelines.go">英✅</a>                                                                                      |
 
 
