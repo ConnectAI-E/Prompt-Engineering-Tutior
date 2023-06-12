@@ -18,7 +18,7 @@ import {resourceLimits} from 'worker_threads';
 import * as fs from 'fs';
 
 test('base OpenAI api', async () => {
-    const re = await getCompletion('Hello, my name is');
+    const re = await getCompletion('Hello, 你的名字是');
     console.log(re);
     expect(re).not.toBe(null);
 });
