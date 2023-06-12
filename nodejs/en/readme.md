@@ -15,7 +15,7 @@ $ pnpm install
 choose  a test topic to run
 
 ```bash
-$ pnpm run test -t 'base OpenAI api'
+$ pnpm run test guidelines -t 'base OpenAI api'
 ```
 
 
