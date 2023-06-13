@@ -1,0 +1,672 @@
+1
+00:00:05,266 --> 00:00:08,133
+welcome to this course on chat GPT prompt engineering
+
+2
+00:00:08,133 --> 00:00:09,299
+for developers
+
+3
+00:00:09,466 --> 00:00:14,399
+I'm thrilled to have with me either forfeit to teach this along with me
+
+4
+00:00:14,700 --> 00:00:17,200
+she is a member of the technical staff of Open AI
+
+5
+00:00:17,333 --> 00:00:20,799
+and had built the popular check GPT retrieval plug in
+
+6
+00:00:21,066 --> 00:00:23,566
+and a large part of work has been teaching people
+
+7
+00:00:23,700 --> 00:00:27,700
+how to use large language model of technology in products
+
+8
+00:00:27,766 --> 00:00:30,266
+she has also contributed to the Open AI Cookbook
+
+9
+00:00:30,266 --> 00:00:31,533
+that teaches people of prompting
+
+10
+00:00:31,533 --> 00:00:32,799
+so it's thrilled to have you with you
+
+11
+00:00:32,800 --> 00:00:34,133
+and I'm thrilled to be here
+
+12
+00:00:34,266 --> 00:00:36,799
+and share some prompting best practices with you all
+
+13
+00:00:38,300 --> 00:00:39,300
+so there's been
+
+14
+00:00:39,300 --> 00:00:41,800
+a lot of material on the internet for prompting
+
+15
+00:00:41,800 --> 00:00:43,100
+with articles like
+
+16
+00:00:43,133 --> 00:00:45,199
+30 prompts everyone has to know
+
+17
+00:00:45,733 --> 00:00:48,899
+a lot of that has been focused on the chat GPT
+
+18
+00:00:48,900 --> 00:00:51,800
+web user interface which many people are using
+
+19
+00:00:51,866 --> 00:00:54,933
+to do specific and often one off task
+
+20
+00:00:54,933 --> 00:00:58,833
+but I think the power of LLM large language models
+
+21
+00:00:58,833 --> 00:01:01,799
+ as a developer to that is using API
+
+22
+00:01:01,800 --> 00:01:04,900
+calls to LLM to quickly build software applications
+
+23
+00:01:04,900 --> 00:01:07,900
+I think that is still very underappreciated
+
+24
+00:01:08,266 --> 00:01:09,999
+in fact my team at AI Fund
+
+25
+00:01:10,000 --> 00:01:12,400
+which is a system comfy to deep lonely AI
+
+26
+00:01:12,466 --> 00:01:15,333
+has been working with many startups on applying
+
+27
+00:01:15,866 --> 00:01:18,599
+technologies to many different applications
+
+28
+00:01:18,600 --> 00:01:20,533
+and it's been exciting to see
+
+29
+00:01:20,566 --> 00:01:23,699
+what LLM APIs can enable developers
+
+30
+00:01:23,733 --> 00:01:25,466
+to very quickly build
+
+31
+00:01:25,800 --> 00:01:26,966
+so in this course
+
+32
+00:01:27,133 --> 00:01:27,899
+we'll share with
+
+33
+00:01:27,900 --> 00:01:30,066
+you some of the possibilities for what
+
+34
+00:01:30,066 --> 00:01:31,133
+you can do as well
+
+35
+00:01:31,133 --> 00:01:33,899
+as best practices for how you can do them
+
+36
+00:01:34,800 --> 00:01:36,500
+there's a lot of material to cover
+
+37
+00:01:36,933 --> 00:01:38,533
+first you'll learn best
+
+38
+00:01:38,533 --> 00:01:41,166
+some prompting best practices for software development
+
+39
+00:01:41,166 --> 00:01:43,666
+then we'll cover some common use cases
+
+40
+00:01:43,666 --> 00:01:47,066
+summarizing inferring transforming expanding
+
+41
+00:01:47,066 --> 00:01:49,866
+and then you'll build a chatbot using an LLM
+
+42
+00:01:50,333 --> 00:01:52,933
+we hope that this will spark your imagination about
+
+43
+00:01:52,933 --> 00:01:54,533
+new applications that you can build
+
+44
+00:01:55,333 --> 00:01:56,699
+so in the development of
+
+45
+00:01:56,700 --> 00:01:59,066
+large language models or LLM that have been brought
+
+46
+00:01:59,066 --> 00:02:00,666
+the two types of LLM
+
+47
+00:02:00,666 --> 00:02:03,399
+which I'm going to refer to as base LLM
+
+48
+00:02:03,566 --> 00:02:05,566
+and instruction tuned LLM
+
+49
+00:02:06,166 --> 00:02:09,699
+so based LLM has been trained to predict the Nick's word
+
+50
+00:02:09,866 --> 00:02:11,699
+based on text training data
+
+51
+00:02:11,700 --> 00:02:13,666
+often trained on a large amount of data
+
+52
+00:02:13,766 --> 00:02:15,466
+from the internet and other sources
+
+53
+00:02:15,466 --> 00:02:17,933
+to figure out what the Nick's most likely were
+
+54
+00:02:18,100 --> 00:02:18,933
+to follow
+
+55
+00:02:19,666 --> 00:02:21,866
+so for example if you were to prompt this
+
+56
+00:02:21,866 --> 00:02:23,999
+once upon the time there was a unicorn
+
+57
+00:02:24,166 --> 00:02:25,733
+it may complete this
+
+58
+00:02:25,733 --> 00:02:27,499
+that as it may predict the next several
+
+59
+00:02:27,500 --> 00:02:28,300
+whereas are
+
+60
+00:02:28,300 --> 00:02:30,900
+that lived the magical forest with all unicorn friends
+
+61
+00:02:31,866 --> 00:02:33,599
+but if you were to prompt us with
+
+62
+00:02:33,600 --> 00:02:35,333
+what is the capital of France
+
+63
+00:02:35,466 --> 00:02:37,366
+then based on what
+
+64
+00:02:37,666 --> 00:02:40,099
+articles on the internet might have
+
+65
+00:02:40,100 --> 00:02:42,400
+is quite possible to the base LLM
+
+66
+00:02:42,733 --> 00:02:44,199
+will complete this with
+
+67
+00:02:44,566 --> 00:02:45,799
+what is France's largest city
+
+68
+00:02:45,800 --> 00:02:47,700
+what is France's population and so on
+
+69
+00:02:48,000 --> 00:02:49,666
+because articles on the internet
+
+70
+00:02:49,733 --> 00:02:51,166
+could quite plausively
+
+71
+00:02:51,200 --> 00:02:53,133
+be list of quest questions about
+
+72
+00:02:53,200 --> 00:02:54,766
+the country of france
+
+73
+00:02:55,666 --> 00:02:58,566
+in contrast an instruction-tunes LLM
+
+74
+00:02:58,733 --> 00:03:01,966
+which is where a lot of momentum of LLM research
+
+75
+00:03:01,966 --> 00:03:03,899
+and practice has been going
+
+76
+00:03:04,100 --> 00:03:05,133
+and instruction tune
+
+77
+00:03:05,133 --> 00:03:07,766
+LLM has been trained to follow instructions
+
+78
+00:03:07,966 --> 00:03:10,566
+so if you were to ask it what is the capital of France
+
+79
+00:03:10,566 --> 00:03:13,133
+is much more likely to output something like
+
+80
+00:03:13,166 --> 00:03:15,366
+the capital of Frances Paris
+
+81
+00:03:15,866 --> 00:03:18,733
+so the way that instruction tune LLM are typically
+
+82
+00:03:18,733 --> 00:03:19,599
+trained is
+
+83
+00:03:19,700 --> 00:03:21,533
+you start off with a base LLM
+
+84
+00:03:21,533 --> 00:03:23,799
+doesn't train on the huge amount of text data
+
+85
+00:03:24,100 --> 00:03:27,000
+and further train it further fine tune it
+
+86
+00:03:27,133 --> 00:03:29,599
+with inputs and outputs that are instructions
+
+87
+00:03:29,600 --> 00:03:32,466
+and good attempts to follow those instructions
+
+88
+00:03:32,700 --> 00:03:34,000
+and then often further refine
+
+89
+00:03:34,000 --> 00:03:36,166
+using a technique called RLHF
+
+90
+00:03:36,166 --> 00:03:37,299
+reinforcement learning
+
+91
+00:03:37,366 --> 00:03:38,533
+from human feedback
+
+92
+00:03:38,700 --> 00:03:39,900
+to make the system
+
+93
+00:03:40,200 --> 00:03:43,366
+better able to be helpful and follow instructions
+
+94
+00:03:43,733 --> 00:03:46,199
+because instruction tuned LLM have been trained
+
+95
+00:03:46,300 --> 00:03:48,866
+to be helpful honest and harmless
+
+96
+00:03:49,133 --> 00:03:49,899
+so for example
+
+97
+00:03:49,900 --> 00:03:52,466
+they're less likely to output problematic
+
+98
+00:03:52,500 --> 00:03:54,000
+tech such as toxic outputs
+
+99
+00:03:54,000 --> 00:03:55,500
+compared to base LLM
+
+100
+00:03:55,866 --> 00:03:57,933
+a lot of the practical usage
+
+101
+00:03:57,933 --> 00:04:00,866
+scenarios have been shifting towards instruction LL
+
+102
+00:04:01,333 --> 00:04:03,733
+some of the best practices you find on the internet
+
+103
+00:04:03,866 --> 00:04:06,266
+may be more suited for a base LLM
+
+104
+00:04:06,333 --> 00:04:08,533
+but for most practical applications today
+
+105
+00:04:08,533 --> 00:04:11,733
+we would recommend most people instead focus on
+
+106
+00:04:11,900 --> 00:04:13,700
+instruction tunes LLM
+
+107
+00:04:13,700 --> 00:04:15,200
+which are easier to use
+
+108
+00:04:15,200 --> 00:04:16,066
+and also
+
+109
+00:04:16,066 --> 00:04:19,733
+because of the work of open AI and other LLM companies
+
+110
+00:04:19,733 --> 00:04:21,899
+becoming safer and more aligned
+
+111
+00:04:22,800 --> 00:04:24,933
+so this course will focus on
+
+112
+00:04:24,933 --> 00:04:27,699
+best practices for instruction to UNOHAMS
+
+113
+00:04:28,166 --> 00:04:29,799
+which is what we recommend
+
+114
+00:04:29,900 --> 00:04:32,066
+you use for most of your applications
+
+115
+00:04:32,566 --> 00:04:34,899
+before moving on I just wanna acknowledge the
+
+116
+00:04:34,966 --> 00:04:37,466
+team from Open AI and deep Learned AI
+
+117
+00:04:37,466 --> 00:04:40,066
+that had contributed to the materials that easy
+
+118
+00:04:40,066 --> 00:04:41,733
+and I will be presenting
+
+119
+00:04:41,733 --> 00:04:44,566
+um very grateful to Andrew Maine Joe Palermo
+
+120
+00:04:44,566 --> 00:04:46,533
+Bars Power Ted Senders
+
+121
+00:04:46,666 --> 00:04:48,733
+and Lily 1 from Open AI
+
+122
+00:04:48,733 --> 00:04:51,366
+that were very involved with a spring stormy materials
+
+123
+00:04:51,366 --> 00:04:53,133
+letting the materials to put together
+
+124
+00:04:53,466 --> 00:04:55,333
+the correct learn for this short course
+
+125
+00:04:55,400 --> 00:04:57,933
+and I'm also grateful of on the deep learning side
+
+126
+00:04:57,933 --> 00:04:59,366
+for the work of Jeff Ladwick
+
+127
+00:04:59,366 --> 00:05:01,133
+Eddie Shu and Tommy Nelson
+
+128
+00:05:01,400 --> 00:05:04,566
+so when you use an instruction tuned LLM
+
+129
+00:05:05,166 --> 00:05:07,866
+think of giving instructions to another person
+
+130
+00:05:08,133 --> 00:05:09,733
+say someone that's smart
+
+131
+00:05:09,733 --> 00:05:12,299
+but doesn't know the specifics of your task
+
+132
+00:05:12,500 --> 00:05:13,800
+so when an LLM
+
+133
+00:05:13,800 --> 00:05:14,800
+doesn't work
+
+134
+00:05:14,966 --> 00:05:17,366
+sometimes it's because the instructions weren't clear
+
+135
+00:05:17,366 --> 00:05:18,499
+enough for example
+
+136
+00:05:18,600 --> 00:05:19,866
+if you were to say
+
+137
+00:05:19,900 --> 00:05:22,366
+please write me something about Alan touring
+
+138
+00:05:22,733 --> 00:05:26,466
+well in addition to that it can be helpful to be clear
+
+139
+00:05:26,600 --> 00:05:27,733
+about whether you want
+
+140
+00:05:28,466 --> 00:05:30,766
+the text to focus on his scientific work
+
+141
+00:05:30,766 --> 00:05:31,866
+or his personal life
+
+142
+00:05:31,866 --> 00:05:34,599
+or his role in history or something else
+
+143
+00:05:34,966 --> 00:05:36,699
+and if you specify
+
+144
+00:05:36,700 --> 00:05:39,566
+what you want the tone of the text to be
+
+145
+00:05:39,733 --> 00:05:41,399
+should it take on the tone like a
+
+146
+00:05:41,400 --> 00:05:42,666
+professional journalist
+
+147
+00:05:42,666 --> 00:05:44,699
+would write was it more of a casual note
+
+148
+00:05:44,700 --> 00:05:47,666
+that you dash off to a friend that holds the LLM
+
+149
+00:05:47,666 --> 00:05:48,933
+generate what you want
+
+150
+00:05:49,333 --> 00:05:50,399
+and of course
+
+151
+00:05:50,400 --> 00:05:52,366
+if you picture yourself asking
+
+152
+00:05:52,366 --> 00:05:53,899
+see a fresh college graduate
+
+153
+00:05:54,133 --> 00:05:56,133
+to carry out this task for you
+
+154
+00:05:56,266 --> 00:05:57,999
+if you can even specify
+
+155
+00:05:58,000 --> 00:05:59,333
+what snippers of text
+
+156
+00:05:59,333 --> 00:06:01,533
+they should read in advance to rate this text
+
+157
+00:06:01,533 --> 00:06:02,533
+about helentouring
+
+158
+00:06:02,600 --> 00:06:04,133
+then that even better
+
+159
+00:06:04,133 --> 00:06:06,499
+sets up that fresh college drag for success
+
+160
+00:06:06,500 --> 00:06:07,866
+to carry out this task
+
+161
+00:06:07,900 --> 00:06:08,700
+for you
+
+162
+00:06:09,166 --> 00:06:12,866
+so in the next video you see examples of how to be
+
+163
+00:06:12,966 --> 00:06:14,333
+clear and specific
+
+164
+00:06:14,333 --> 00:06:17,666
+which is an important principle of prompting LMS
+
+165
+00:06:17,900 --> 00:06:19,700
+and you also learn from either
+
+166
+00:06:19,700 --> 00:06:21,766
+a second principle of prompting
+
+167
+00:06:21,866 --> 00:06:24,699
+that is giving ltlm time to think
+
+168
+00:06:24,900 --> 00:06:27,533
+so that let's go on to the next video
+
