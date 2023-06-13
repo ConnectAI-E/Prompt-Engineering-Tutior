@@ -14,13 +14,13 @@ test('sentiment', async () => {
     expect(re2).not.toBe(null);
 })
 
-test('Identifytypes', async () => {
+test('Identify types', async () => {
     const re = await getCompletion(Identifytypes);
     console.log(re);
     expect(re).not.toBe(null);
 })
 
-test('Identifyanger', async () => {
+test('Identify anger', async () => {
     const re = await getCompletion(Identifyanger);
     console.log(re);
     expect(re).not.toBe(null);
@@ -32,19 +32,19 @@ test('Extract', async () => {
     expect(re).not.toBe(null);
 })
 
-test('multipletasks', async () => {
+test('multiple tasks', async () => {
     const re = await getCompletion(multipletasks);
     console.log(re);
     expect(re).not.toBe(null);
 })
 
-test('Infertopics', async () => {
+test('Infer topics', async () => {
     const re = await getCompletion(Infertopics);
     console.log(re);
     expect(re).not.toBe(null);
 })
 
-test('certaintopics', async () => {
+test('certain topics', async () => {
     const re = await getCompletion(certaintopics);
     console.log(re);
     expect(re).not.toBe(null);
