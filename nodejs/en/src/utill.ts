@@ -24,3 +24,17 @@ export async function getCompletion(prompt: string, model = 'gpt-3.5-turbo', tem
     const result = completion.data.choices[0].message?.content;
     return result
 };
+
+
+export async function getCompletionFromMessages( messages: any[] , model = 'gpt-3.5-turbo', temperature = 0 ) {
+
+    const completion = await openai.createChatCompletion({
+        model: model,
+        messages: messages,
+        temperature: temperature       // The degree of randomness in the output
+    });
+
+    return completion.data.choices[0].message?.content;
+};
+
+
