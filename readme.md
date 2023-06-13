@@ -34,7 +34,7 @@
 | Python | <a href="#">中❌</a>、<a href="./python/en/guidelines.ipynb">英✅</a>                                                                                   |
 | NodeJS | <a href="./nodejs/cn/readme.md">中✅</a>、<a href="./nodejs/en/readme.md">英✅</a>                                                                                                             
 | Golang | <a href="#">中❌</a>、<a href="./golang/en/guidelines.go">英✅</a>                                                                                      |
-| 字幕     | <a href="./srt">中❌</a>、<a href="./srt">英✅</a>      
+| 字幕     | <a href="./srt/cn">中✅</a>、<a href="./srt/en">英✅</a>      
 
 
 ## 正文
